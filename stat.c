@@ -37,6 +37,7 @@ int main() {
   char permission[100];
   sprintf(permission, "%o", file_data.st_mode & 511);
 
+  // there's definitely a better way to do this but I'm not smart enough for that...
   printf("File permissions: -");
   int i = 0;
   for (; i < 3; i++) {
@@ -58,6 +59,7 @@ int main() {
       printf("rwx");
     }
   }
+  printf("\n");
 
   return 0;
 }
